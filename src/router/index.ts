@@ -1,31 +1,31 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
-import Tabs from '../views/Tabs.vue'
+import Screens from '../screens/Screens.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    redirect: '/tabs/tab1'
+    redirect: '/screens/screen1'
   },
   {
-    path: '/tabs/',
-    component: Tabs,
+    path: '/screens/',
+    component: Screens,
     children: [
       {
         path: '',
-        redirect: '/tabs/tab1'
+        redirect: '/screens/screen1'
       },
       {
-        path: 'tab1',
-        component: () => import('@/views/Tab1.vue')
+        path: 'screen1',
+        component: () => import('@/screens/Screen1.vue')
       },
       {
-        path: 'tab2',
-        component: () => import('@/views/Tab2.vue')
+        path: 'screen2',
+        component: () => import('@/screens/Screen2.vue')
       },
       {
-        path: 'tab3',
-        component: () => import('@/views/Tab3.vue')
+        path: 'screen3',
+        component: () => import('@/screens/Screen3.vue')
       }
     ]
   }
