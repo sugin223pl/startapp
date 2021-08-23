@@ -1,0 +1,8 @@
+{
+  "name": "startapp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue",
+  "id": "bba4f509"
+}
